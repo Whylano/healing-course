@@ -8,7 +8,13 @@ sourceCompatibility = '11'
 targetCompatibility = '11'
 
 repositories {
-	mavenCentral()
+	mavenCentral() // 인증이 필요 없는 리포지토리 사용
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.security:spring-security-bom:6.3.0" // 안정적인 BOM 버전 사용
+	}
 }
 
 dependencies {
